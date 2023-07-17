@@ -1,0 +1,11 @@
+apiVersion: infinispan.org/v1
+kind: Infinispan 
+metadata:
+  name: datagrid-service 
+  namespace: datagrid-demo
+spec:
+  #Indicates two node DG cluster
+  replicas: 2
+  #Exposing it as external load Balancer
+  expose:
+    type: LoadBalancer

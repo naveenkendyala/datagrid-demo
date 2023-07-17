@@ -1,0 +1,15 @@
+credentials:
+  - username: admin
+    password: adminuser
+  - username: naveen
+    password: password
+    roles:
+      - admin
+  - username: readuser
+    password: readpwd
+    roles:
+      - observer
+  - username: monitorusr
+    password: monitorpwd
+    roles:
+      - monitor
