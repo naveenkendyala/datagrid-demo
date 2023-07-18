@@ -9,3 +9,7 @@ spec:
   #Exposing it as external load Balancer
   expose:
     type: LoadBalancer
+  security:
+    authorization:
+      enabled: true    
+    endpointSecretName: connect-secret

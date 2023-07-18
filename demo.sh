@@ -12,19 +12,6 @@ oc apply -f cluster/02.cluster.yaml
 
 
 
-# Sample Cluster Provisioning
-apiVersion: infinispan.org/v1
-kind: Infinispan 
-metadata:
-  name: datagrid-service 
-  namespace: datagrid-demo
-spec:
-  #Indicates two node DG cluster
-  replicas: 2
-  #Exposing it as external load Balancer
-  expose:
-    type: LoadBalancer
-
 # Talk through the services
 # datagrid-service          : Use from our applications inside the OCP cluster.
 # datagrid-service-admin    : Used by the operator to configure and communicate with the cluster.
