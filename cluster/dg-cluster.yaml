@@ -9,7 +9,10 @@ spec:
   #Exposing it as external load Balancer
   expose:
     type: LoadBalancer
+  #Enable security related configuration
   security:
+    #Enables Authorization
     authorization:
       enabled: true    
+    #Provides the mapping between the users and defined roles
     endpointSecretName: connect-secret

@@ -2,13 +2,13 @@
 # Operator Demo
 #-----------------------------------------------------------------------------
 
-
+# Authorization & Authentication
 # Create "connect-secret" secret
 oc delete secret connect-secret --ignore-not-found
 oc create secret generic --from-file=identities.yaml connect-secret
 
 # Create the cluster
-oc apply -f cluster/02.cluster.yaml
+oc apply -f cluster/cluster.yaml
 
 
 
