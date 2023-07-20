@@ -16,3 +16,14 @@ spec:
       enabled: true    
     #Provides the mapping between the users and defined roles
     endpointSecretName: connect-secret
+  # Specify the service type
+  service:
+    replicationFactor: 2
+    type: DataGrid
+  # Specify the details for the configuration listener
+  configListener:
+    logging:
+      level: info
+    enabled: true
+    cpu: 1000m
+    memory: 1024Mi

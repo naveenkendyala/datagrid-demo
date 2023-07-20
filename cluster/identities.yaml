@@ -1,15 +1,11 @@
 credentials:
   - username: admin
-    password: adminuser
-  - username: naveen
-    password: password
+    password: adminpwd
+  - username: myapp
+    password: myapppwd
     roles:
-      - admin
-  - username: readuser
-    password: readpwd
+      - application
+  - username: myobserver
+    password: myobserverpwd
     roles:
       - observer
-  - username: monitorusr
-    password: monitorpwd
-    roles:
-      - monitor

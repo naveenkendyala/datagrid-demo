@@ -10,8 +10,6 @@ oc create secret generic --from-file=identities.yaml connect-secret
 # Create the cluster
 oc apply -f cluster/cluster.yaml
 
-
-
 # Talk through the services
 # datagrid-service          : Use from our applications inside the OCP cluster.
 # datagrid-service-admin    : Used by the operator to configure and communicate with the cluster.
