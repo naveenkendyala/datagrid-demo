@@ -11,7 +11,9 @@
 # Protocol
    # HTTP : Rest Implementation
    # Hot rod : Because of its rich capabilities
-   # 
+
+# Create demo namespace
+oc new-project datagrid-demo
 
 # Talk about Authentication and Authorization
    # Authorization is based on RBAC and Roles
@@ -20,6 +22,7 @@
 oc delete secret connect-secret --ignore-not-found
 oc create secret generic --from-file=identities.yaml connect-secret
 
+# Create an Instance of the DataGrid Instance
 # Show Cluster Creating Options
    # Number of Nodes or Replicas
    # Service Type
