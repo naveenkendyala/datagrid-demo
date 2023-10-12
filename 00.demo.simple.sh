@@ -2,6 +2,9 @@
 # Operator Demo
 #-----------------------------------------------------------------------------
 
+# Create demo namespace
+oc new-project datagrid-demo
+
 # Authorization & Authentication
 # Create "connect-secret" secret
 oc delete secret connect-secret --ignore-not-found

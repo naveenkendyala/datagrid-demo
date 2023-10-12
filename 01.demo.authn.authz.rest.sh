@@ -2,10 +2,6 @@
 #                 AuthN + AuthZ + Cache
 #---------------------------------------------------------------------------------------------------------
 
-
-# Whare are your timelines to get this done?
-# 
-
 # Consider this as guidance
 
 # First Lets talk about the Cache Types
@@ -47,7 +43,7 @@ oc create secret generic --from-file=identities.yaml connect-secret
 
 
 # Web Console
-   # Login with monitor 	: Show the authentication and Authorization
+   # Login with monitor 	  : Show the authentication and Authorization
    # Login with admin 	    : Show the authentication and Authorization
    #  
 
