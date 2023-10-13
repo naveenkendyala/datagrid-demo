@@ -8,7 +8,7 @@ spec:
   replicas: 2
   #Exposing it as external load Balancer
   expose:
-    type: LoadBalancer
+    type: Route
   #Enable security related configuration
   security:
     #Enables Authorization

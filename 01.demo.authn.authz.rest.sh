@@ -39,7 +39,7 @@ oc create secret generic --from-file=identities.yaml connect-secret
       # Datagrid Service
         # Good for cross replication
         # Storage Backing
-   # Load Balancer
+   # Load Balancer / Route / Node Port
    # Configuration Listener Pod
       # Enabled
       # Configure resources (if needed)
