@@ -44,25 +44,28 @@ oc create secret generic --from-file=identities.yaml connect-secret
       # Node Affinity ways of creating datagrid cluster
       # 
 
+# Services : Talk through the below
+# datagrid-service          : Use from our applications inside the OCP cluster.
+# datagrid-service-admin    : Used by the operator to configure and communicate with the cluster.
+# datagrid-service-ping     : which ensures that the clusters are healthy and operational
+# datagrid-service-external : used for external access outside the cluster
+oc get services
 
-# Web Console
-   # Login with monitor 	  : Show the authentication and Authorization
-   # Login with admin 	    : Show the authentication and Authorization
+
+# Web Console : Talk through the below
+   # Available via the "datagrid-service-external" service abstraction
+   # Authentication & Authorization
+     # Login with random user and password
+     # Login with myobserver 	  : Show the
+       # Show that there is no edit permisssion
+     # Login with admin
+       # Show the 
    #  
 
-# Creating Cache
-   # Options and generate the yaml / json / xml
-   # 
-
-# Connecting to the cache example
-   # Post man request variations
-
-# Setting up the same cluster locally
-# Setting up the cache locally
-  ./cli.sh user create admin -p adminpwd -g admin
-  ./cli.sh user create myapp -p myapppwd -g application
-  ./cli.sh user create myobserver -p myobserverpwd -g observer   
-
+# Creating Cache : Talking Points
+   # Option#01  : Create configuration using the wizard. This generates the yaml / json / xml
+   # Option#02 : Use the output with GitOps  
+   # Option#03 : Programmatically
 
 apiVersion: infinispan.org/v2alpha1
 kind: Cache
@@ -88,3 +91,13 @@ spec:
         storage: "OFF_HEAP"
   updates:
     strategy: retain
+
+# Connect DataGrid : Talking Point(s)
+   # Post man request variations
+   # 
+
+# Setting up the same cluster locally
+# Setting up the cache locally
+  ./cli.sh user create admin -p adminpwd -g admin
+  ./cli.sh user create myapp -p myapppwd -g application
+  ./cli.sh user create myobserver -p myobserverpwd -g observer   
