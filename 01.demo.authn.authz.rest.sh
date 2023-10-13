@@ -15,6 +15,13 @@
 # Create demo namespace
 oc new-project datagrid-demo
 
+# Talk : Operators
+  # DataGrid Operator
+  # Showcase the Operator
+
+# Switch to the project "datagrid-demo"
+oc project datagrid-demo
+
 # Talk about Authentication and Authorization
    # Authorization is based on RBAC and Roles
    # Authentication is via the secrets that map the users with the roles
@@ -56,16 +63,17 @@ oc get services
    # Available via the "datagrid-service-external" service abstraction
    # Authentication & Authorization
      # Login with random user and password
-     # Login with myobserver 	  : Show the
-       # Show that there is no edit permisssion
+     # Login with myobserver
+       # Show that everything is read only
      # Login with admin
-       # Show the 
-   #  
+       # Show the buttons indicating you have permissions
 
-# Creating Cache : Talking Points
-   # Option#01  : Create configuration using the wizard. This generates the yaml / json / xml
-   # Option#02 : Use the output with GitOps  
-   # Option#03 : Programmatically
+# Creating Cache  : Talking Points
+   # Option#01    : Create configuration using the wizard. This generates the yaml / json / xml
+   #              : Config Listener : Show the synchronization
+   #              : Show the cache
+   # Option#02    : Use the output with GitOps  
+   # Option#03    : Programmatically
 
 apiVersion: infinispan.org/v2alpha1
 kind: Cache
